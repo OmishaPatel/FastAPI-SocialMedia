@@ -26,4 +26,4 @@ In this Social Media type API user's can create their account, create a post, li
 
 https://fastapi-socialmedia.herokuapp.com/docs
 
-fastapi.png
+![Website Image](fastapi.png)
