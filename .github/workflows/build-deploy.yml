@@ -5,10 +5,16 @@ on:
     branches: ["master"]
 
 jobs:
-  job1:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: production
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
-      - name: say hi to omi
-        run: echo "hi omi"
+      - name: deploying to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name:${{secrets.HEROKU_APP_NAME}}
+          heroku_email:${{secrets.HEROKU_EMAIL}}
