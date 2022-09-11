@@ -10,10 +10,6 @@ class PostBase(BaseModel):
     published: bool = True
 
 
-class PostCreate(PostBase):
-    pass
-
-
 class UserOut(BaseModel):
     id: int
     email: EmailStr
